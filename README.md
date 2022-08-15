@@ -27,3 +27,7 @@ VITE v3.0.7  ready in 198 ms
 ```
 
 Load the above URL (Local) in your browser and interact with the app.
+
+## Approach
+
+I took the approach of doing the minimum minification of the original HTML files as I realize we likely won't have that ability with black crow clients as well.
