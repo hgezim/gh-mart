@@ -21,7 +21,9 @@ export function addToCart(event: Event) {
   }
 
   cartStorage.addToStorage(itemId, name, 1, price);
-  analytics.conversionEvent({cart: [{id: itemId, price, quantity: 1, name}]});
+  analytics.conversionEvent({
+    cart: [{ id: itemId, price, quantity: 1, name }],
+  });
 }
 
 export function updateCartDOM() {

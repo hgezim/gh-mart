@@ -6,7 +6,7 @@ let cart: {
   numberOfItems: number;
 } = { contents: {}, totalAmount: 0, numberOfItems: 0 };
 
-export function syncCartOnLoad () {
+export function syncCartOnLoad() {
   // If we don't have a cart in localStorage already we don't need to do anything because it'll be set when
   // a cart item is added
   if (window.localStorage.getItem("cart")) {
@@ -41,7 +41,7 @@ function set(itemId: string, name: string, quantity: number, price: number) {
 }
 
 export function getStorageContents() {
-    return cart;
+  return cart;
 }
 
 export function addToStorage(
