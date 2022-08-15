@@ -1,4 +1,7 @@
+import { Analytics } from "./analytics";
 import * as cartStorage from "./storage";
+
+const analytics = new Analytics();
 
 export function addToCart(event: Event) {
   const button = event.target as HTMLElement;
@@ -18,6 +21,7 @@ export function addToCart(event: Event) {
   }
 
   cartStorage.addToStorage(itemId, name, 1, price);
+  analytics.conversionEvent({cart: [{id: itemId, price, quantity: 1, name}]});
 }
 
 export function updateCartDOM() {

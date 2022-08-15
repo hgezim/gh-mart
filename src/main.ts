@@ -1,5 +1,9 @@
+import { Analytics } from "./analytics";
 import { addToCart, updateCartDOM } from "./cart";
 import { syncCartOnLoad } from "./storage";
+
+
+const analytics = new Analytics();
 
 
 window.addEventListener('load', function bindAddToCartButtons() {
@@ -17,3 +21,8 @@ window.addEventListener('load', syncCartOnLoad);
 
 
 window.addEventListener('load', updateCartDOM);
+
+
+window.addEventListener('load', async function () {
+    await analytics.viewEvent();
+});
