@@ -16,3 +16,14 @@ To run crowmart in a development server, first install the required packages:
 Then run:
 
 ```npm run dev```
+
+You will then see output like this:
+
+```
+VITE v3.0.7  ready in 198 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+  ➜  Network: use --host to expose
+```
+
+Load the above URL (Local) in your browser and interact with the app.
